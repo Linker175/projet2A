@@ -9,7 +9,7 @@ include_once('./config_mysql.php');
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style_admin_page.css" />
+    <link rel="stylesheet" href="style_admin_page.css"  type="text/css"/>
     <title>Page Admin</title>
 </head>
 <body class="user_body">
@@ -56,7 +56,7 @@ include_once('./config_mysql.php');
     
         <tr>    
             <? while($row = $req->fetch()) { ?>
-            <td><? echo "{".$row['longitude'].";".$row['lattitude']."}"; ?></td>
+            <td><? echo "{ ".$row['longitude']." ; ".$row['lattitude']." }"; ?></td>
             <td><? echo $row['id_arceau']; ?></td>
             <td><? echo $row['etat']; ?></td>
             <td><? echo $row['id_user']; ?></td>
