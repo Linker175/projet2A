@@ -18,9 +18,7 @@ session_start();
 
         <!-- acces a l'interface de connexion -->
         <div class="Connexion">
-            <a class="connexion" href="login.php" target="_blank">
-                Se connecter
-            </a>
+            <?php include_once('./login.php');?>
         </div>
                     
     </body>
