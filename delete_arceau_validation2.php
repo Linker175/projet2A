@@ -17,9 +17,34 @@ $deleteArceau ->execute([
 
 ?>
 
-<div class=deleted> 
-    ARCEAU SUPPRIME
+<!DOCTYPE html>
+<html>
+<!-------------- HEAD -------------->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="update_arceau.css"  type="text/css"/>
+    <title>Validation de la suppression </title>
+</head>
+<!-------------- BODY -------------->
+
+<body>
+
+
+<div class="top">
+            <h1>
+                Suppression d'un Arceau
+            </h1>
 </div>
-<br>
-<a href="//localhost/projet/admin_page.php"> Retour à la page d'administration </a>
-</br>
+
+
+<div class="interface"> 
+    <div class="deleted">
+    <h1 class="deleted">ARCEAU SUPPRIME<h1>
+
+    <a class="bouton" href="//localhost/projet/ajout_arceau.php"> Retour à la page d'administration </a>
+    </div>
+</div>
+
+</body>
+</html>
