@@ -11,50 +11,43 @@
     <title>Ajout Arceau</title>
 </head>
 
+<!-------------- FORMULAIRE D'AJOUT A LA BASE DE DONNE --------------> 
 
-<!-- VALIDATION DU FORMULAIRE D'AJOUT -->
+<form action="ajout_arceau_validation.php" method="post">
 
-<?php
-if (isset($_POST['latitude']) || isset($_POST['longitude']) || isset($_POST['etat']) || isset($_POST['utilisateur']) || isset($_POST['groupe'])){
+    <?php if(isset($errorMessage)) : ?>
+    
+        <div class="alert alert-danger" role="alert">
+            <?php echo $errorMessage; ?>
+        </div>
 
-/*ajouter une ligne pour vérifier que l'arceau n'est pas déjà dans la database et donc ne pas faire un doublon*/
+    <?php endif; ?>
 
-$sqlQuery2 = 'INSERT INTO arceau(lattitude,longitude,etat,id_user,groupe) VALUES(:lattitude,:longitude,:etat,:id_user,:groupe)';
-$insertArceau = $db -> prepare($sqlQuery2);
-$insertArceau -> execute([
-        'lattitude' => $_POST['latitude'],
-        'longitude' => $_POST['longitude'],
-        'etat' => $_POST['etat'],
-        'id_user' => $_POST['utilisateur'],
-        'groupe' => $_POST['groupe']
-]);
+    <div class="coords">
+        <label for="latitude" class="form-label">Latitude</label>
+        <input type="number" class="form-control" id="latitude_add" name="latitude" placeholder="+/- 00.0000000">
 
-
-?>
-
-<body class="user_body">
-    <div class="container">
-        <h1>Ajout de l'arceau réussie !</h1>
-
-     <?php echo ('Latitude :'.$_POST['latitude'])."<br>"; ?>
-     <?php echo ('Longitude :'.$_POST['longitude'])."<br>"; ?>
-     <?php echo ('État :'.$_POST['etat'])."<br>"; ?>
-     <?php echo ('Utilisateur :'.$_POST['utilisateur'])."<br>"; ?>
-     <?php echo ('Groupe :'.$_POST['groupe'])."<br>"; ?>
-
-
-     <a href="//localhost/projet/admin_page.php"> Retour à la page d'administration </a>
+        <label for="longitude" class="form-label">Longitude</label>
+        <input type="number" class="form-control" id="longitude_add" name="longitude"  placeholder="+/- 00.0000000">
     </div>
-</body>
 
-<?php
-}
-else{
-    echo('il faut des données fournies qui respectent le format demandé');
-?>
-    <a href="//localhost/projet/admin_page.php"> Retour à la page d'administration </a>
+    <div class="etat">
+        <label for="etat" class="form-label">État</label>
+        <input type="number" class="form-control" id="etat_add" name="etat"  placeholder="0 or 1">
+    </div>
 
-<?php
-}
-?>
+    <div class="utilisateur">
+        <label for="utilisateur" class="form-label">Utilisateur</label>
+        <input type="number" class="form-control" id="utilisateur_add" name="utilisateur"  placeholder="1">
+    </div>
+
+    <div class="groupe">
+        <label for="groupe" class="form-label">Groupe</label>
+        <input type="number" class="form-control" id="groupe_add" name="groupe"  placeholder="1">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+</form>
+
+<a href="//localhost/projet/admin_page.php"> Retour à la page d'administration </a>
 
