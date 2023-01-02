@@ -22,6 +22,18 @@ $insertArceau -> execute([
 
 ?>
 
+<!DOCTYPE html>
+<html>
+<!-------------- HEAD -------------->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style_admin_page.css"  type="text/css"/>
+    <title>Validation de l'ajout </title>
+</head>
+
+<!-------------- BODY -------------->
+
 <body class="user_body">
     <div class="container">
         <h1>Ajout de l'arceau réussie !</h1>
