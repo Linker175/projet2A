@@ -1,4 +1,6 @@
-<?php include_once('./config_mysql.php') ?>
+<?php 
+session_start();
+include_once('./config_mysql.php'); ?>
 
 
 <!DOCTYPE html>
@@ -25,10 +27,10 @@
 
     <div class="coords">
         <label for="latitude" class="form-label">Latitude</label>
-        <input type="number" class="form-control" id="latitude_add" name="latitude" placeholder="+/- 00.0000000">
+        <input type="number" class="form-control" id="latitude_add" step="0.0000001" name="latitude" placeholder="+/- 00.0000000">
 
         <label for="longitude" class="form-label">Longitude</label>
-        <input type="number" class="form-control" id="longitude_add" name="longitude"  placeholder="+/- 00.0000000">
+        <input type="number" class="form-control" id="longitude_add" step="0.0000001" name="longitude"  placeholder="+/- 00.0000000">
     </div>
 
     <div class="etat">
