@@ -1,10 +1,15 @@
+@import url("css/bouton.css");
+@import url("css/top.css");
+
 table {
     table-layout: fixed;
-    width: 55%;
+    width: 90%;
     border-collapse: collapse;
     border: 3px solid black;
     font-family: sans-serif;
     margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
 
@@ -58,7 +63,6 @@ tbody tr:nth-child(odd) {
   }
 
 caption {
-
   text-align: center;
   font-weight: bold;
   padding: 15px;
@@ -66,72 +70,27 @@ caption {
   text-transform : uppercase;
 }
 
-.bouton {
-    display: inline-block;
-    background-color: #F25635;
-    border-radius: 10px;
-    border: 2px solid black;
-    color: black;
-    font-family: sans-serif;
-    text-decoration: none;
-    text-align: center;
-    white-space: nowrap;
-    font-size: 18px;
-    padding: 5px;
-    padding-left: 8px;
-    padding-right: 8px;
-    width: auto;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 4px;
-
-  }
-
-.bouton span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.3s;
-}
-
-.bouton span:after {
-    content: "\00bb";
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.3s;
-}
-
-.bouton:hover {
-    background-color: #E4E2E1;
-}
-
-.bouton:hover span {
-    padding-right: 25px;
-}
-
-.bouton:hover span:after {
-    opacity: 1;
-    right: 0;
-}
-
 h1 {
-
   text-align: center;
   font-family: sans-serif;   
 }
 
-.top{ 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  weight : 100%;
-  background-color: #F25635;
-  border: 2px solid black;
-  margin-top: -10px;
-  margin-right: -0.5%;
-  margin-left: -0.7%;
-   margin-bottom: 20px;
+body{
+  background-color: #E4E2E1;
 }
+
+.interface{
+  border-radius: 20px;
+  margin-left: 20%; 
+  margin-right: 20%;
+  background-color: white;
+  border:     3px solid black;
+}
+
+.send{
+    margin-top: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
