@@ -25,15 +25,10 @@ include_once('./config_mysql.php');
     ?>
     </div>
 
-
-<!-------------- AJOUT D'UN ARCEAU --------------> 
-
-    <a class ="bouton" href="//localhost/projet/ajout_arceau.php"> Ajouter un arceau </a>
-
-
 <!-------------- AFFICHAGE DE LA BASE DE DONNEE --------------> 
 
 <!-- On prépare la requête -->
+    <div class="interface">
 
     <?php
         $sqlQuery = 'SELECT * FROM arceau ORDER BY id_arceau DESC';
@@ -71,7 +66,13 @@ include_once('./config_mysql.php');
     $req->closeCursor();   
     ?>
 
+<!-------------- AJOUT D'UN ARCEAU --------------> 
+
     </table>
 
+    <div class="send">
+        <a class ="bouton" href="//localhost/projet/ajout_arceau.php"> Ajouter un arceau </a>
+    </div>
+    </div>
 </body>
 </html>
