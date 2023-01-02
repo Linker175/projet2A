@@ -1,10 +1,8 @@
 <?php
-session_start();
-?>
-
-<?php
 include_once('variables.php');
+
 // Validation du formulaire de connexion 
+
 if (isset($_POST['email']) &&  isset($_POST['password'])) {
     foreach ($users as $user) {
         if (
@@ -78,28 +76,32 @@ if (isset($_SESSION['USER_TYPE'])) {
 
 ?>
 
-<!-- Si utilisateur non identifie on affiche le formulaire -->
+<!------ Si utilisateur non identifie on affiche le formulaire ------>
 <?php if(!isset($loggedUser)): ?>
 <form action="login.php" method="post">
+
 <!-- si message d'erreur on l'affiche -->
     <?php if(isset($errorMessage)) : ?>
+        
         <div class="alert alert-danger" role="alert">
             <?php echo $errorMessage; ?>
         </div>
+
     <?php endif; ?>
+
     <div class="mb-3">
         <label for="email" class="form-label">Email</label>
         <input type="email" class="form-control" id="email" name="email" aria-describedby="email-help" placeholder="you@exemple.com">
     </div>
+
     <div class="mb-3">
         <label for="password">Mot de passe</label>
         <input type="password" id="password" name="password">
     </div>
     <button type="submit" class="btn btn-primary">Envoyer</button>
 </form>
-<!-- 
-    Si utilisateur/trice bien connectée on affiche un message de succès
--->
+
+<!------ Si utilisateur/trice bien connecté on le renvoie vers sa page dédiée ------>
 <?php else: ?>
     <?php if($loggedUser['user_type']==='user'): ?>
     <div>
