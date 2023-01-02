@@ -10,11 +10,12 @@ session_start();
         <title>Park'ENSEA</title>
         <link rel="icon" type="image/png" sizes="64x64" href="image_onglet.png">
     </head>
-    <body style="background: rgb(255 ,255 ,255);">
-
-        <h1>
-            Park'ENSEA
-        </h1>
+    <body>
+        <div class=top>
+            <h1>
+                Park'ENSEA
+            </h1>
+        </div>
 
         <!-- acces a l'interface de connexion -->
         <div class="Connexion">
@@ -22,5 +23,6 @@ session_start();
         </div>
                     
     </body>
+</html>
 
     
