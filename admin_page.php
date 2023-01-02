@@ -13,15 +13,11 @@ include_once('./config_mysql.php');
     <title>Page Admin</title>
 </head>
 <body class="user_body">
-    <div class="container">
+    <div class="top">
         <h1>Park'ENSEA ADMIN !</h1>
-        <?php if(isset($loggedUser)): ?>
-            Vous êtes bien connectés
-        <?php endif; ?>
     </div>
 
-
-    <div class="map_admin">
+    <div class="connected admin">
     <?php    
       if (isset($_COOKIE['USER_NAME'])){
            ?> Bienvenue à toi <?php echo($_COOKIE['USER_NAME']); 
@@ -32,9 +28,8 @@ include_once('./config_mysql.php');
 
 <!-------------- AJOUT D'UN ARCEAU --------------> 
 
-    <div class=boutton>
-        <a href="//localhost/projet/ajout_arceau.php"> Ajouter un arceau </a>
-    </div>
+    <a class ="bouton" href="//localhost/projet/ajout_arceau.php"> Ajouter un arceau </a>
+
 
 <!-------------- AFFICHAGE DE LA BASE DE DONNEE --------------> 
 
@@ -69,7 +64,7 @@ include_once('./config_mysql.php');
             <td><? echo $row['id_user']; ?></td>
             <td><? echo $row['groupe']; ?></td>
             <td><? echo $row['id_arceau']; ?></td>
-            <td><a class="button_modifcation" href="./update_arceau.php?id=<?php echo($row['id_arceau']); ?>">Modifier</a></td>
+            <td><a class="bouton" href="./update_arceau.php?id=<?php echo($row['id_arceau']); ?>">Modifier</a></td>
         </tr>
     
     <? }   
