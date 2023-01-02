@@ -9,47 +9,64 @@ include_once('./config_mysql.php'); ?>
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style_admin_page.css"  type="text/css"/>
+    <link rel="stylesheet" href="ajout_arceau.css"  type="text/css"/>
     <title>Ajout Arceau</title>
 </head>
 
+<body>
+
+    <div class=top>
+            <h1>
+                Ajout d'un Arceau
+            </h1>
+    </div>
 <!-------------- FORMULAIRE D'AJOUT A LA BASE DE DONNE --------------> 
+    <div class= interface>
 
-<form action="ajout_arceau_validation.php" method="post">
+    <form action="ajout_arceau_validation.php" method="post">
 
-    <?php if(isset($errorMessage)) : ?>
-    
-        <div class="alert alert-danger" role="alert">
-            <?php echo $errorMessage; ?>
+        <?php if(isset($errorMessage)) : ?>
+        
+            <div class="alert alert-danger" role="alert">
+                <?php echo $errorMessage; ?>
+            </div>
+
+        <?php endif; ?>
+
+        <div class="lattitude">
+            <label for="latitude" class="form_text">Latitude</label>
+            <input type="number" class="form" id="latitude_add" step="0.0000001" name="latitude" placeholder="+/- 00.0000000">
         </div>
 
-    <?php endif; ?>
+        <div class="longitude">
+            <label for="longitude" class="form_text">Longitude</label>
+            <input type="number" class="form" id="longitude_add" step="0.0000001" name="longitude"  placeholder="+/- 00.0000000">
+        </div>
 
-    <div class="coords">
-        <label for="latitude" class="form-label">Latitude</label>
-        <input type="number" class="form-control" id="latitude_add" step="0.0000001" name="latitude" placeholder="+/- 00.0000000">
+        <div class="etat">
+            <label for="etat" class="form_text">État</label>
+            <input type="number" class="form" id="etat_add" name="etat"  placeholder="0 or 1">
+        </div>
 
-        <label for="longitude" class="form-label">Longitude</label>
-        <input type="number" class="form-control" id="longitude_add" step="0.0000001" name="longitude"  placeholder="+/- 00.0000000">
+        <div class="utilisateur">
+            <label for="id_user" class="form_text">Utilisateur</label>
+            <input type="number" class="form" id="utilisateur_add" name="id_user"  placeholder="1">
+        </div>
+
+        <div class="groupe">
+            <label for="groupe" class="form_text">Groupe</label>
+            <input type="number" class="form" id="groupe_add" name="groupe"  placeholder="1">
+        </div >
+        <div class="send">
+            <button type="submit" class="bouton">Ajouter</button>
+        </div>
+    </form>
+
     </div>
 
-    <div class="etat">
-        <label for="etat" class="form-label">État</label>
-        <input type="number" class="form-control" id="etat_add" name="etat"  placeholder="0 or 1">
+    <div class="return">
+        <a class="bouton" href="//localhost/projet/admin_page.php"> Retour à la page d'administration </a>
     </div>
 
-    <div class="utilisateur">
-        <label for="id_user" class="form-label">Utilisateur</label>
-        <input type="number" class="form-control" id="utilisateur_add" name="id_user"  placeholder="1">
-    </div>
-
-    <div class="groupe">
-        <label for="groupe" class="form-label">Groupe</label>
-        <input type="number" class="form-control" id="groupe_add" name="groupe"  placeholder="1">
-    </div>
-
-    <button type="submit" class="btn btn-primary">Envoyer</button>
-</form>
-
-<a href="//localhost/projet/admin_page.php"> Retour à la page d'administration </a>
-
+</body>
+</html>
