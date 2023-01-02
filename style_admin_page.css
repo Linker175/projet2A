@@ -1,36 +1,52 @@
 table {
     table-layout: fixed;
-    width: 40%;
+    width: 55%;
     border-collapse: collapse;
     border: 3px solid black;
+    font-family: sans-serif;
+    margin-top: 10px;
   }
+
 
 thead th:nth-child(1) {
-    width: 40%;
+
+    width: 35%;
 }
   
-  thead th:nth-child(2) {
-    width: 20%;
+thead th:nth-child(2) {
+
+    width: 13%;
   }
   
-  thead th:nth-child(3) {
-    width: 20%;
+thead th:nth-child(3) {
+
+    width: 13%;
   }
   
-  thead th:nth-child(4) {
-    width: 20%;
+thead th:nth-child(4) {
+    width: 13%;
   }    
 
+thead th:nth-child(5) {
+    width: 13%;
+  }    
+
+thead th:nth-child(6) {
+    width: 23%;
+}    
+
 th, td {
-    padding: 20px;
+    padding: 15px;
     text-align: center;
     border: 1px solid black;
 
   }
 
+
 thead th{
     background-color: #F25635;
     border: 3px solid black;
+    text-align: center;
   }
   
 tbody tr:nth-child(odd) {
@@ -40,3 +56,82 @@ tbody tr:nth-child(odd) {
   tbody tr:nth-child(even) {
     background-color: white;
   }
+
+caption {
+
+  text-align: center;
+  font-weight: bold;
+  padding: 15px;
+  font-size: larger;
+  text-transform : uppercase;
+}
+
+.bouton {
+    display: inline-block;
+    background-color: #F25635;
+    border-radius: 10px;
+    border: 2px solid black;
+    color: black;
+    font-family: sans-serif;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 18px;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 4px;
+
+  }
+
+.bouton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+}
+
+.bouton span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.3s;
+}
+
+.bouton:hover {
+    background-color: #E4E2E1;
+}
+
+.bouton:hover span {
+    padding-right: 25px;
+}
+
+.bouton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+h1 {
+
+  text-align: center;
+  font-family: sans-serif;   
+}
+
+.top{ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  weight : 100%;
+  background-color: #F25635;
+  border: 2px solid black;
+  margin-top: -10px;
+  margin-right: -0.5%;
+  margin-left: -0.7%;
+   margin-bottom: 20px;
+}
