@@ -28,30 +28,42 @@ $insertArceau -> execute([
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style_admin_page.css"  type="text/css"/>
+    <link rel="stylesheet" href="ajout_arceau.css"  type="text/css"/>
     <title>Validation de l'ajout </title>
 </head>
 
 <!-------------- BODY -------------->
 
-<body class="user_body">
-    <div class="container">
-        <h1>Ajout de l'arceau réussie !</h1>
+<body>
 
-     <?php echo ('Latitude :'.$_POST['latitude'])."<br>"; ?>
-     <?php echo ('Longitude :'.$_POST['longitude'])."<br>"; ?>
-     <?php echo ('État :'.$_POST['etat'])."<br>"; ?>
-     <?php echo ('Utilisateur :'.$_POST['id_user'])."<br>"; ?>
-     <?php echo ('Groupe :'.$_POST['groupe'])."<br>"; ?>
-
-
-
+    <div class=top>
+            <h1>
+                Ajout d'un Arceau
+            </h1>
     </div>
 
-    
-    <a href="//localhost/projet/admin_page.php"> Retour à la page d'administration </a>
-    <br>
-    <a href="//localhost/projet/admin_page.php"> Retour à la page d'ajout d'un arceau </a>
+    <div class="interface">
+        <div class="ajout">
+            <h1>Ajout de l'arceau réussie !</h1>
+            <h3>
+            <?php echo ('Latitude :'.$_POST['latitude'])."<br>"; ?>
+            <?php echo ('Longitude :'.$_POST['longitude'])."<br>"; ?>
+            <?php echo ('État :'.$_POST['etat'])."<br>"; ?>
+            <?php echo ('Utilisateur :'.$_POST['id_user'])."<br>"; ?>
+            <?php echo ('Groupe :'.$_POST['groupe'])."<br>"; ?>
+            </h3>
+        </div>
+    </div>
+
+    <div class = "boutons">
+        <div class="return">
+            <a class="bouton" href="//localhost/projet/admin_page.php"> Retour à la page d'administration </a>
+        </div>
+        <div class="return_ajout">
+            <a class="bouton" href="//localhost/projet/ajout_arceau.php"> Retour à la page d'ajout d'un arceau </a>
+
+        </div>
+    </div>
 
 </body>
 
@@ -60,19 +72,20 @@ $insertArceau -> execute([
 else{
     echo('il faut des données fournies qui respectent le format demandé');
 ?>
+    <div class = "boutons">
+        <div class="return">
+            <a class="bouton" href="//localhost/projet/admin_page.php"> Retour à la page d'administration </a>
+        </div>
+        <div class="return_ajout">
+            <a class="bouton" href="//localhost/projet/ajout_arceau.php"> Retour à la page d'ajout d'un arceau </a>
 
-
-    <div class=boutton>
-        <a href="//localhost/projet/ajout_arceau.php"> Retour à la page d'administration </a>
+        </div>
     </div>
 
-    <br>
-
-    <div class=boutton>
-        <a href="//localhost/projet/admin_page.php"> Retour à la page d'ajout d'un arceau </a>
-
-    </div>
 
 <?php
 }
 ?>
+
+</body>
+</html>
