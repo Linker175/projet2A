@@ -1,0 +1,50 @@
+
+.bouton {
+    display: inline-block;
+    background-color: #F25635;
+    border-radius: 10px;
+    border: 2px solid black;
+    color: black;
+    font-family: sans-serif;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 4px;
+
+  }
+
+.bouton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+}
+
+.bouton span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.3s;
+}
+
+.bouton:hover {
+    background-color: #E4E2E1;
+}
+
+.bouton:hover span {
+    padding-right: 25px;
+}
+
+.bouton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+

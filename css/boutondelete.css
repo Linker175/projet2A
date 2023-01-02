@@ -1,0 +1,51 @@
+
+.boutondelete {
+    display: inline-block;
+    background-color: red;
+    border-radius: 10px;
+    border: 2px solid black;
+    color: black;
+    font-family: sans-serif;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 4px;
+
+  }
+
+.boutondelete span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+}
+
+.boutondelete span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.3s;
+}
+
+.boutondelete:hover {
+    background-color: #E4E2E1;
+}
+
+.boutondelete:hover span {
+    padding-right: 25px;
+}
+
+.boutondelete:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+

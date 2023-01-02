@@ -1,0 +1,14 @@
+.top{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #F25635;
+    border: 3px solid black;
+    margin-top: -10px;
+    margin-right: -0.5%;
+    margin-left: -0.7%;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+  }
+  
