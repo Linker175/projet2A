@@ -88,17 +88,22 @@ if (isset($_SESSION['USER_TYPE'])) {
         </div>
 
     <?php endif; ?>
+    <div class="connexion">
+        <h2> Se connecter </h2>
+        <div class="email">
+            <label for="email" class="form_text">Email</label>
+            <input type="email" class="form" id="email" name="email" aria-describedby="email-help" placeholder="you@exemple.com">
+        </div>
+        <div class="password">
+            <label class="form_text" for="password">Mot de passe</label>
+            <input type="password" class="form" id="password" name="password">
+        </div>
+    
+        <div class=send>
+        <button type="submit" class="bouton">Envoyer</button>
+        </div>
 
-    <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" name="email" aria-describedby="email-help" placeholder="you@exemple.com">
     </div>
-
-    <div class="mb-3">
-        <label for="password">Mot de passe</label>
-        <input type="password" id="password" name="password">
-    </div>
-    <button type="submit" class="btn btn-primary">Envoyer</button>
 </form>
 
 <!------ Si utilisateur/trice bien connecté on le renvoie vers sa page dédiée ------>
