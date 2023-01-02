@@ -56,6 +56,7 @@ include_once('./config_mysql.php');
                 <th scope="col"> Utilisateur</th>
                 <th scope="col"> Groupes </th>
                 <th scope="col"> Id </th>
+                <th scope="col"> Modification </th>
             </tr>
         </thead>
   
@@ -68,10 +69,9 @@ include_once('./config_mysql.php');
             <td><? echo $row['id_user']; ?></td>
             <td><? echo $row['groupe']; ?></td>
             <td><? echo $row['id_arceau']; ?></td>
-            <td><?  ?></td>
+            <td><a class="button_modifcation" href="./update_arceau.php?id=<?php echo($row['id_arceau']); ?>">Modifier</a></td>
         </tr>
     
-
     <? }   
     $req->closeCursor();   
     ?>
