@@ -39,8 +39,8 @@ include_once('./config_mysql.php'); ?>
     </div>
 
     <div class="utilisateur">
-        <label for="utilisateur" class="form-label">Utilisateur</label>
-        <input type="number" class="form-control" id="utilisateur_add" name="utilisateur"  placeholder="1">
+        <label for="id_user" class="form-label">Utilisateur</label>
+        <input type="number" class="form-control" id="utilisateur_add" name="id_user"  placeholder="1">
     </div>
 
     <div class="groupe">
