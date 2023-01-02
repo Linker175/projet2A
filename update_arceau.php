@@ -18,7 +18,6 @@ $retrieveArceau ->execute([
 $arceau = $retrieveArceau->fetch(PDO::FETCH_ASSOC);
 
 
-
 ?>
 
 
@@ -35,7 +34,7 @@ $arceau = $retrieveArceau->fetch(PDO::FETCH_ASSOC);
 
 <!-------------- FORMULAIRE DE MODIFCATION DE LA BASE DE DONNE --------------> 
 
-<form action="update_arceau_validation.php" method="post">
+<form action="update_arceau_validation.php?id=<?php echo($getData['id'])?>" method="post">
     <?php if(isset($errorMessage)) : ?>
     
         <div class="alert alert-danger" role="alert">
@@ -45,8 +44,8 @@ $arceau = $retrieveArceau->fetch(PDO::FETCH_ASSOC);
     <?php endif; ?>
 
     <div class="coords">
-        <label for="latitude" class="form-label">Latitude</label>
-        <input type="number" class="form-control" id="latitude_add" name="latitude" step="0.0000001" placeholder="+/- 00.0000000", value= <?php echo($arceau['lattitude']); ?>>
+        <label for="lattitude" class="form-label">Latitude</label>
+        <input type="number" class="form-control" id="latitude_add" name="lattitude" step="0.0000001" placeholder="+/- 00.0000000", value= <?php echo($arceau['lattitude']); ?>>
 
         <label for="longitude" class="form-label">Longitude</label>
         <input type="number" class="form-control" id="longitude_add" name="longitude" step="0.0000001" placeholder="+/- 00.0000000", value= <?php echo($arceau['longitude']); ?>>
@@ -57,9 +56,9 @@ $arceau = $retrieveArceau->fetch(PDO::FETCH_ASSOC);
         <input type="number" class="form-control" id="etat_add" name="etat"  placeholder="0 or 1", value= <?php echo($arceau['etat']); ?>>
     </div>
 
-    <div class="utilisateur">
-        <label for="utilisateur" class="form-label">Utilisateur</label>
-        <input type="number" class="form-control" id="utilisateur_add" name="utilisateur"  placeholder="1", value= <?php echo($arceau['id_user']); ?>>
+    <div class="id_user">
+        <label for="id_user" class="form-label">Utilisateur</label>
+        <input type="number" class="form-control" id="utilisateur_add" name="id_user"  placeholder="1", value= <?php echo($arceau['id_user']); ?>>
     </div>
 
     <div class="groupe">
@@ -68,7 +67,11 @@ $arceau = $retrieveArceau->fetch(PDO::FETCH_ASSOC);
     </div>
 
     <button type="submit" class="btn btn-primary">Modifier</button>
+    <a class="button_delete" href="./delete_arceau_validation.php?id=<?php echo($getData['id']); ?>">Supprimer</a>
 </form>
 
+
+
+<br>
 <a href="//localhost/projet/admin_page.php"> Retour à la page d'administration </a>
 

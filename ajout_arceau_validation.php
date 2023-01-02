@@ -6,7 +6,7 @@ include_once('./config_mysql.php');
 <!------ VALIDATION DU FORMULAIRE D'AJOUT ------->
 
 <?php
-if (isset($_POST['latitude']) || isset($_POST['longitude']) || isset($_POST['etat']) || isset($_POST['utilisateur']) || isset($_POST['groupe'])){
+if (isset($_POST['lattitude']) || isset($_POST['longitude']) || isset($_POST['etat']) || isset($_POST['id_user']) || isset($_POST['groupe'])){
 
 /*ajouter une ligne pour vérifier que l'arceau n'est pas déjà dans la database et donc ne pas faire un doublon*/
 
@@ -16,7 +16,7 @@ $insertArceau -> execute([
         'lattitude' => $_POST['latitude'],
         'longitude' => $_POST['longitude'],
         'etat' => $_POST['etat'],
-        'id_user' => $_POST['utilisateur'],
+        'id_user' => $_POST['id_user'],
         'groupe' => $_POST['groupe']
 ]);
 
@@ -41,7 +41,7 @@ $insertArceau -> execute([
      <?php echo ('Latitude :'.$_POST['latitude'])."<br>"; ?>
      <?php echo ('Longitude :'.$_POST['longitude'])."<br>"; ?>
      <?php echo ('État :'.$_POST['etat'])."<br>"; ?>
-     <?php echo ('Utilisateur :'.$_POST['utilisateur'])."<br>"; ?>
+     <?php echo ('Utilisateur :'.$_POST['id_user'])."<br>"; ?>
      <?php echo ('Groupe :'.$_POST['groupe'])."<br>"; ?>
 
 
