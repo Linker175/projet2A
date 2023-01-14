@@ -1,8 +1,11 @@
 <?php
 include_once('variables.php');
 
-// Validation du formulaire de connexion 
+// Ajout de la fonction de chiffrement des données email et password
 
+include_once('chiffrement_data.php');
+
+// Validation du formulaire de connexion 
 if (isset($_POST['email']) &&  isset($_POST['password'])) {
     foreach ($users as $user) {
         if (
@@ -17,7 +20,7 @@ if (isset($_POST['email']) &&  isset($_POST['password'])) {
                 'USER_LOGGED',
                 $loggedUser['email'],
                 [
-                    'expires' => time() + 120,
+                    'expires' => time() + 60,
                     'secure' => true,
                     'httponly' => true,
                 ]
@@ -26,7 +29,7 @@ if (isset($_POST['email']) &&  isset($_POST['password'])) {
                 'USER_TYPE',
                 $loggedUser['user_type'],
                 [
-                    'expires' => time() + 120,
+                    'expires' => time() + 60,
                     'secure' => true,
                     'httponly' => true,
                 ]
@@ -35,7 +38,7 @@ if (isset($_POST['email']) &&  isset($_POST['password'])) {
                 'USER_NAME',
                 $user['full_name'],
                 [
-                    'expires' => time() + 120,
+                    'expires' => time() + 60,
                     'secure' => true,
                     'httponly' => true,
                 ]
