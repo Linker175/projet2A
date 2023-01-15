@@ -1,0 +1,70 @@
+@import url("css/bouton.css");
+@import url("css/boutondelete.css");
+@import url("css/top.css");
+
+.form_div{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 10%; 
+    margin-right: 10%;
+    padding-top: 10px;
+}
+
+.form_text{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form{
+    font-size: 20px;
+}
+
+.boutons{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.send{
+    margin-top: 10px;
+    margin-left: 35%;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.send2{
+    margin-top: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.return{
+    margin-left: 20%;
+}
+
+.interface{
+    border-radius: 20px;
+    margin-left: 20%; 
+    margin-right: 20%;
+    background-color: white;
+    border:     3px solid black;
+    font-family: sans-serif;
+  }
+
+body{
+    background-color: #E4E2E1;
+}
+
+.ajout{
+    margin-left: 5%; 
+}
+
+.boutondel{
+    text-align: center;
+}
+
+.deleted{
+    text-align: center;
+}
