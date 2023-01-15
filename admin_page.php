@@ -12,6 +12,8 @@ include_once('./config_mysql.php');
     <link rel="stylesheet" href="style_admin_page.css"  type="text/css"/>
     <title>Page Admin</title>
 </head>
+
+
 <body class="user_body">
     <div class="top">
         <h1>Park'ENSEA ADMIN !</h1>
@@ -25,54 +27,23 @@ include_once('./config_mysql.php');
     ?>
     </div>
 
-<!-------------- AFFICHAGE DE LA BASE DE DONNEE --------------> 
-
-<!-- On prépare la requête -->
+<!-------------- AFFICHAGE DU TABLEAU DES ARCEAUX --------------> 
     <div class="interface">
-
-    <?php
-        $sqlQuery = 'SELECT * FROM arceau ORDER BY id_arceau DESC';
-        $req = $db->query($sqlQuery); 
-    ?>
-
-<!-- On affiche le tableau -->
-
-    <table>
-        <caption> Tous les arceaux </caption>
-        <thead>
-            <tr>
-                <th scope="col"> Coordonnées </th>
-                <th scope="col"> État</th>
-                <th scope="col"> Utilisateur</th>
-                <th scope="col"> Groupes </th>
-                <th scope="col"> Id </th>
-                <th scope="col"> Modification </th>
-            </tr>
-        </thead>
-  
-<!-- On complète avec les données -->
-    
-        <tr>    
-            <? while($row = $req->fetch()) { ?>
-            <td><? echo "{ ".$row['longitude']." ; ".$row['lattitude']." }"; ?></td>
-            <td><? echo $row['etat']; ?></td>
-            <td><? echo $row['id_user']; ?></td>
-            <td><? echo $row['groupe']; ?></td>
-            <td><? echo $row['id_arceau']; ?></td>
-            <td><a class="bouton" href="./update_arceau.php?id=<?php echo($row['id_arceau']); ?>">Modifier</a></td>
-        </tr>
-    
-    <? }   
-    $req->closeCursor();   
-    ?>
-
+        <?php include_once('./tableau/tab_arceau.php')?>
 <!-------------- AJOUT D'UN ARCEAU --------------> 
-
-    </table>
-
-    <div class="send">
-        <a class ="bouton" href="//localhost/projet/ajout_arceau.php"> Ajouter un arceau </a>
+        <div class="send">
+                <a class ="bouton" href="//localhost/projet/ajout_arceau.php"> Ajouter un arceau </a>
+        </div> 
     </div>
-    </div>
+
+    
+<!-------------- AFFICHAGE DU TABLEAU DES UTILISATEURS --------------> 
+    <div class="interface">
+        <?php include_once('./tableau/tab_users.php')?>
+        <div class="send">
+                <a class ="bouton" href="//localhost/projet/ajout_utilisateur.php"> Ajouter un utilisateur</a>
+        </div>
+    </div> 
+
 </body>
 </html>
