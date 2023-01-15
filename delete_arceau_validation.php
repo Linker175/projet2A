@@ -26,7 +26,7 @@ if (isset($arceau['lattitude']) || isset($arceau['longitude']) || isset($arceau[
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="update_arceau.css"  type="text/css"/>
+    <link rel="stylesheet" href="update.css"  type="text/css"/>
     <title>Validation de la suppression </title>
 </head>
 
@@ -58,7 +58,7 @@ if (isset($arceau['lattitude']) || isset($arceau['longitude']) || isset($arceau[
     </div>
   
     <div class="return">
-            <a class="bouton" href="//localhost/projet/ajout_arceau.php"> Retour à la page d'administration </a>
+            <a class="bouton" href="//localhost/projet/admin_page.php"> Retour à la page d'administration </a>
     </div>
   
 </body>
@@ -70,7 +70,7 @@ else{
 ?>
 <div class=return>
     <div class=bouton>
-        <a href="//localhost/projet/ajout_arceau.php"> Retour à la page d'administration </a>
+        <a href="//localhost/projet/admin_page.php"> Retour à la page d'administration </a>
     </div>
 </div>
 

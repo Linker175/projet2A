@@ -23,7 +23,7 @@ $deleteArceau ->execute([
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="update_arceau.css"  type="text/css"/>
+    <link rel="stylesheet" href="update.css"  type="text/css"/>
     <title>Validation de la suppression </title>
 </head>
 <!-------------- BODY -------------->
@@ -42,7 +42,7 @@ $deleteArceau ->execute([
     <div class="deleted">
     <h1 class="deleted">ARCEAU SUPPRIME<h1>
 
-    <a class="bouton" href="//localhost/projet/ajout_arceau.php"> Retour à la page d'administration </a>
+    <a class="bouton" href="//localhost/projet/admin_page.php"> Retour à la page d'administration </a>
     </div>
 </div>
 

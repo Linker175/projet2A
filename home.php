@@ -4,16 +4,20 @@ session_start();
 
 <!DOCTYPE html>
 <html>
+
+<!-------------- HEAD -------------->
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style_home.css" />
-        <title>Park'ENSEA</title>
+        <title>Reserv'Park</title>
         <link rel="icon" type="image/png" sizes="64x64" href="image_onglet.png">
     </head>
+
+<!-------------- BODY -------------->
     <body>
         <div class=top>
             <h1>
-                Park'ENSEA
+                Reserv'Park
             </h1>
         </div>
 

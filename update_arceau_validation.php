@@ -33,7 +33,7 @@ $modifyArceau -> execute([
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="update_arceau.css"  type="text/css"/>
+    <link rel="stylesheet" href="update.css"  type="text/css"/>
     <title>Validation de la modification </title>
 </head>
 
