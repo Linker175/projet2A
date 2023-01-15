@@ -1,5 +1,7 @@
 @import url("css/bouton.css");
 @import url("css/top.css");
+@import url("css/tabarceau.css");
+@import url("css/tabuser.css");
 
 table {
     table-layout: fixed;
@@ -81,8 +83,9 @@ body{
 
 .interface{
   border-radius: 20px;
-  margin-left: 20%; 
-  margin-right: 20%;
+  margin-left: 10%; 
+  margin-right: 10%;
+  margin-bottom: 10px;
   background-color: white;
   border:     3px solid black;
 }

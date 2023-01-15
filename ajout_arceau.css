@@ -1,43 +1,7 @@
 @import url("css/bouton.css");
 @import url("css/top.css");
 
-.lattitude{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-left: 10%; 
-    margin-right: 10%;
-    padding-top: 10px;
-}
-
-.longitude{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-left: 10%; 
-    margin-right: 10%;
-    padding-top: 10px;
-}
-
-.etat{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-left: 10%; 
-    margin-right: 10%;
-    padding-top: 10px;
-}
-
-.utilisateur{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-left: 10%; 
-    margin-right: 10%;
-    padding-top: 10px;
-}
-
-.groupe{
+.form_div{
     display: flex;
     flex-direction: column;
     text-align: left;
